@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>My Goals as a Student</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <header> 
+        <h1>Welcome to My Personal Website</h1> 
+    </header> 
+  
+    <nav> 
+        <ul> 
+            <li><a href="index.html">HOME</a></li> 
+            <li class="dropdown"> 
+                <a href="#" class="dropbtn">ABOUT</a> 
+                <div class="dropdown-content"> 
+                    <a href="skills.html">Skills I'm Developing</a> 
+                    <a href="goals.html">My Goals as a Student</a> 
+                    <a href="funfacts.html">Fun Facts About Me</a> 
+                </div> 
+            </li> 
+            <li><a href="gallery.html">GALLERY</a></li> 
+            <li><a href="contact.html">CONTACT</a></li> 
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG 
+OUT</a> 
+  
+        </ul> 
+    </nav> 
+    <section id="section2"></section> 
+    <section id="drop"> 
+        <h2>My Goals as a Student</h2> 
+            <p style="text-align: center;">Here are the aspirations I’m passionately 
+pursuing!</p> 
+            
+                <div class="goal-grid"> 
+                    <div class="goal-card" onclick="toggleGoalDetails(1)"> 
+                        <div class="goal-header" style="background-color: 
+#d779e2;"><strong>Short-Term Goals</strong></div> 
+                        <p><strong>Skills development skills. </strong></p> 
+                        <div class="goal-details" id="goal1-details"> 
+                            <p>By focusing on these short-term goals,  
+                                To improve my programming,database management,and web development skills.</p> 
+                        </div> 
+                    </div> 
+         
+                    <div class="goal-card" onclick="toggleGoalDetails(1)"> 
+                        <div class="goal-header" style="background-color: #2c99d3;"><strong>Long
+Term Goals</strong></div> 
+                        <p>Successful Is professional.</p> 
+                        <div class="goal-details" id="goal2-details"> 
+                            <p>Who can developinnovative and efficient information system.I aim to build a stable Career,continuosly 
+                                improve my technical skills, and use technology to create solutions that make peoples lives easier.
+                            </p></p> 
+                        </div> 
+                    </div> 
+         
+                    <div class="goal-card" onclick="toggleGoalDetails(2)"> 
+                        <div class="goal-header" style="background-color: 
+#ffe5b4;"><strong>Personal Development</strong></div> 
+                        <p>Investing in Myself: My Personal Development Journey</p> 
+                        <div class="goal-details" id="goal3-details"> 
+                            <p>To grow as an individual by improving my skills by building confidence, and becoming more disciplined
+                              independent,and open to learning
+                            </p> 
+                        </div> 
+                    </div> 
+         
+                    <div class="goal-card" onclick="toggleGoalDetails(2)"> 
+                        <div class="goal-header" style="background-color: 
+#ffb6c1;"><strong>Career Goals</strong></div> 
+                        <p>To become a skilled IS professional who usess technology,creativity,and problem-solving
+                            to develop efficient system and make a positive impact </p> 
+                        <div class="goal-details" id="goal4-details"> 
+                            <p>My goal is to grow into a leadership position where I can guide 
+teams, drive projects to success, and contribute to strategic decision-making.  
+                                I aim to develop my leadership skills through experience and by 
+seeking out opportunities to lead initiatives within my current role.</p> 
+                        </div> 
+                    </div> 
+                </div> 
+            </section> 
+    </section> 
+     
+    <footer> 
+        <p>&copy; 2026 Roa Saligumba. All rights reserved.</p> 
+    </footer> 
+    <div class="footer-divider"></div> <!-- Orange line --> 
+  
+  
+    <script> 
+        // Function to toggle details for both cards in a row 
+        function toggleGoalDetails(group) { 
+            const details1 = document.getElementById('goal' + (group * 2 - 1) + '-details'); 
+            const details2 = document.getElementById('goal' + (group * 2) + '-details'); 
+  
+            // Toggle visibility for the paired goals 
+            details1.classList.toggle('active'); 
+            details2.classList.toggle('active'); 
+        } 
+    </script> 
+  
+  
+<script> 
+    // Logout function with confirmation 
+    function confirmLogout() { 
+        // Show a confirmation message to the user 
+        const confirmLogout = confirm("Are you sure you want to log out?"); 
+     
+        // If the user confirms, proceed with logging out 
+        if (confirmLogout) { 
+            // Mark the user as logged out in localStorage (if used) 
+            localStorage.removeItem('isLoggedIn'); // Or any other keys related to login 
+credentials 
+     
+            // Redirect to the login page 
+            window.location.href = 'login.html'; 
+        } else { 
+            // If the user cancels, do nothing 
+            return; 
+        } 
+    } 
+     
+    </script> 
+  
+</body> 
+</html>
