@@ -202,10 +202,10 @@ function confirmLogout() {
         localStorage.removeItem('isLoggedIn'); // Or any other keys related to login credentials 
   
         // Redirect to the login page 
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         //Check if user is Logged in
         if(localStorage.getItem('isLoggedIn') !=='true'){
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     } else { 
         // If the user cancels, do nothing 
